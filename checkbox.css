@@ -36,3 +36,38 @@
     left: 3px;
     top: -0.7px;
 }
+.radio-carta {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.radio-carta label {
+    line-height: 1.5;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.radio-carta label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border: 1px solid #3b0000;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.radio-carta label.selected::before {
+    border: 2px solid red;
+    /* Bordo rosso quando selezionato */
+}
+
+.radio-carta input[type="radio"]:checked + label::before {
+    background-color: #3b0000;
+}
